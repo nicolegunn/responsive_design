@@ -1,0 +1,81 @@
+/* CSS Reset in App.jsx includes font: inherit 
+    Responsive font size set for entire NavBar using clamp 
+    and then all sizing and spacing properties set based on em
+*/
+
+/* NavButtons for Full Size Screen */
+.NavButtonsContainer {
+  display: flex;
+  flex: 1;
+  font-size: 0.5em;
+  font-weight: 600;
+}
+
+.Link {
+  /* Intention would be to have number of characters of longest button 
+  plus 2 ch on either side for padding*/
+  min-width: 10ch;
+  text-align: center;
+  padding-block: 0.5em;
+  margin-left: 0.5em;
+  border: clamp(1px, 0.2em, 4px) color-mix(in lab, var(--color-accent) 75%, var(--color-light) 25%) solid;
+  color: var(--color-medium);
+}
+
+.Link:hover{
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+}
+
+/* Hamburger Menu for Small Screen Width */
+.Bars {
+  color: var(--color-dark);
+  font-size: 1.4em;
+}
+
+.Menu {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  /* Intention would be to have number of characters of longest button 
+  plus 5 ch for padding*/
+  width: 10ch;
+  background-color: color-mix(in lab, var(--color-accent) 75%, var(--color-light) 25%);
+}
+
+.MenuLinks li {
+  padding: .5em;
+  border-bottom: 0.25px var(--color-light) dashed;
+}
+
+.MenuLinks li:hover{
+  background-color: var(--color-accent);
+}
+
+.Close {
+  float: right;
+  margin-right: .25em;
+  color: var(--color-light);
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.Close:hover,
+.Close:focus {
+  color: var(--color-dark);
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media (width < 900px) {
+  .NavButtonsContainer {
+    display: none;
+  }
+}
+
+@media (width >= 900px) {
+  .HamburgerMenu {
+    display: none;
+  }
+}

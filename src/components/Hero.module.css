@@ -1,0 +1,59 @@
+.HeroContainer {
+  container: main / inline-size;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  padding-inline: 5cqi;
+  color: var(--color-light);
+  font-size: clamp(2rem, 10cqi - 0.5rem, 4.5rem);
+}
+
+.HeadingContainer {
+  width: min(50cqi, 500px);
+}
+
+.Heading {
+  padding-bottom: 1em;
+  font-family: var(--font-serif);
+}
+
+.InputContainer {
+  display: flex;
+  justify-content: center;
+  min-height: 1.5em;
+  font-size: 0.4em;
+}
+
+.TextBox {
+  width: clamp(100px, 35cqi, 450px);
+  padding-left: 1em;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  caret-color: var(--color-accent);
+}
+
+.Button {
+  width: clamp(100px, 15cqi, 150px);
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+@container main (max-width: 900px) {
+  .HeadingContainer {
+    text-align: center;
+    width: min(80cqi, 500px);
+    margin: auto;
+  }
+
+  .InputContainer {
+    flex-wrap: wrap;
+  }
+
+  .TextBox,
+  .Button {
+    width: clamp(200px, 80cqi, 500px);
+    padding: 0.5em;
+    margin-top: 0.5em;
+  }
+}

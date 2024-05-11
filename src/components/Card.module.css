@@ -1,0 +1,65 @@
+.CardContainer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(300px, 1fr, 500px);
+  grid-column-gap: 5vw;
+  padding: 5vw;
+  scroll-snap-type: inline mandatory;
+  scroll-padding: 5vw;
+  background-color: var(--color-light);
+}
+
+.Card {
+  container: card / inline-size;
+  min-width: 300px;
+  scroll-snap-align: start;
+  background-color: var(--color-medium);
+}
+
+.Card img {
+  width: 100%;
+}
+
+.TextContainer {
+  margin: 0.5em;
+  font-size: clamp(1rem, 3cqi + 0.5rem, 2.5rem);
+}
+
+.Title {
+  padding-block: 0.25em;
+  color: var(--color-accent);
+  font-family: var(--font-serif);
+}
+
+.CardText {
+  color: var(--color-light);
+  font-size: 0.75em;
+  white-space: wrap;
+}
+
+@media (width <= calc(500px/0.90)) {
+  .CardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    align-items: center;
+  }
+
+  .Card {
+    width: min(90vw, 500px);
+    min-width: fit-content;
+  }
+}
+
+@media (calc(500px / 0.90) < width < calc((300px * 3)/0.80)) {
+  .CardContainer {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+}
+
+@media (width >= calc((300px * 3)/0.80)) {
+  .CardContainer {
+    justify-content: center;
+  }
+}

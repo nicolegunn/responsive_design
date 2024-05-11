@@ -1,0 +1,33 @@
+/* CSS Reset in App.jsx includes font: inherit 
+    Responsive font size set for entire NavBar using clamp 
+    and then all sizing and spacing properties set based on em
+*/
+.NavContainer {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em;
+  background-color: var(--color-light);
+  font-size: clamp(1rem, 2vw + 0.5rem, 3rem);
+}
+
+.LogoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.Circle {
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 0.25em;
+  border-radius: 50%;
+  background-color: var(--color-medium);
+}
+
+.Heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+}
