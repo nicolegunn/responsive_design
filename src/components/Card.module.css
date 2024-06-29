@@ -34,7 +34,6 @@
 .CardText {
   color: var(--color-light);
   font-size: 0.75em;
-  white-space: wrap;
 }
 
 @media (width <= calc(500px/0.90)) {

@@ -34,12 +34,12 @@ function App() {
   };
 
   return (
-    <>
+    <div className={isLoginOpen && "LockPage"}>
       {isLoginOpen && <Login toggleLoginBox={toggleLoginBox} />}
       <Nav toggleLoginBox={toggleLoginBox} />
       <Hero />
       <CardContainer cards={cards} />
-    </>
+    </div>
   );
 }
 
