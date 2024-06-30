@@ -24,6 +24,13 @@ This project, developed as part of a Mission Ready course, demonstrates a respon
 ![Container Queries](https://img.shields.io/badge/Container_Queries-Used-yellow)
 ![Color Mix](https://img.shields.io/badge/Color_Mix-Integrated-orange)
 
+## Prerequisites
+
+![Node](https://img.shields.io/badge/Node.js-16.0.0-green)
+![npm](https://img.shields.io/badge/npm-8.0.0-red)
+
+- Node.js (v16 or later)
+- npm (v8 or later) or yarn (v1.22 or later)
 
 ## Installation and Setup
 
